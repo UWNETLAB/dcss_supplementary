@@ -16,9 +16,11 @@ The `datasets` directory contains all of the data that I used in the book, or in
 - A "Freedom on the Net" dataset published by [Freedom House](https://freedomhouse.org/report/freedom-net) in 2020.
 - A collection of small datasets related to campaign spending in the 2020 American General Election, as well as the [Cook Partisan Voting Index](https://en.wikipedia.org/wiki/Cook_Partisan_Voting_Index).
 - A subset of data from the [European Values Survey](https://europeanvaluesstudy.eu). 
-- A subset of the Russian Trolls dataset collected by CITE and distributed by [fivethirtyeight](https://fivethirtyeight.com/features/why-were-sharing-3-million-
+- A subset of the Russian Trolls dataset collected by CITE and distributed by [fivethirtyeight](https://fivethirtyeight.com/features/why-were-sharing-3-million-russian-troll-tweets/)
 
 Other datasets may be added overtime, depending on what I am teaching in my own classes and using in the problem sets (below), and what others generously make available.
+
+All of these datasets can be downloaded and managed using [the `dcss` Python package](LINK).
 
 ## Pre-trained Models
 
