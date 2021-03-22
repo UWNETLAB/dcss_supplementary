@@ -7,11 +7,12 @@ This repo contains all of the learning materials accompanying [John McLevey (202
 What's in here? 
 
 1. [Datasets](#datasets)
-2. [Pre-trained Language Models](#pre-trained-language-models)
-3. [Questions and Scaffolded Problem Sets for Each Chapter](#questions-and-scaffolded-problem-sets-for-each-chapter)
-4. [Supplementary Chapter Content and Tutorials](#supplementary-chapter-content-and-tutorials)
-5. [Practical Advice from Other Computational Social Scientists and Data Scientists](#practical-advice-from-other-computational-social-scientists-and-data-scientists)
-6. [Citation Information](#citation-information)
+2. [The `dcss` Python package](#the-dcss-python-package)
+3. [Pre-trained Language Models](#pre-trained-language-models)
+4. [Questions and Scaffolded Problem Sets for Each Chapter](#questions-and-scaffolded-problem-sets-for-each-chapter)
+5. [Supplementary Chapter Content and Tutorials](#supplementary-chapter-content-and-tutorials)
+6. [Practical Advice from Other Computational Social Scientists and Data Scientists](#practical-advice-from-other-computational-social-scientists-and-data-scientists)
+7. [Citation Information](#citation-information)
 
 ## Datasets
 
@@ -29,7 +30,7 @@ The `datasets` directory contains all of the data that I used in the book, or in
 
 Other datasets may be added overtime, depending on what I am teaching in my own classes and using in the problem sets (below), and what others generously make available.
 
-### The DCSS Python package
+### The `dcss` Python package
 
 All of these datasets can be downloaded and managed using [the `dcss` Python package](LINK), which also contains a wide variety of utility functions used in the book and in the accompanying problem sets.
 
