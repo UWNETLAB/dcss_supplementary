@@ -24,7 +24,7 @@ This repo contains all of the learning materials accompanying [John McLevey (202
   - for the full text of N journal articles, indexed by JSTOR, on democracies and autocracies
     - word2vec skip-gram, word2vec cbow, fastText
     - by decade
-- questions and scaffolded problem sets accompanying every chapter of the book 
+- **questions and scaffolded problem sets accompanying every chapter of the book** 
   - Note: these are what I use in my own classes at the University of Waterloo
   - Note: these materials will grow and evolve over time!
   - Note: these materials were developed collaboratively, many lead by my PhD students [Pierson Browne](https://github.com/pbrowne88) and [Tyler Crick](https://github.com/tcrick) in the context of my Winter and Spring 2021 offerings of INTEG 440 / SOC 440 (undergraduate) and INTEG 640 / SOC 719 (graduate) Computational Social Science classes at the University of Waterloo.  
@@ -36,12 +36,13 @@ This repo contains all of the learning materials accompanying [John McLevey (202
   - data clustering
   - analytical Bayesian inference
 - **practical advice from other data scientists and computational social scientists**, including:
-  - Rochelle Terman
-  - Alix Rule 
-  - Jillian Anderson 
-  - Pierson Browne
-  - Tyler Crick
-  - Sasha Graham
+  - [Rochelle Terman]()
+  - [Alix Rule]() 
+  - [Jillian Anderson]() 
+  - [Deena Abul-Fottouh]()
+  - [Pierson Browne]()
+  - [Tyler Crick]()
+  - [Sasha Graham]()
   - *with others on the way!*
 
 These learning materials will continue to grow and evolve!
