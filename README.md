@@ -4,6 +4,13 @@
 
 This repo contains all of the learning materials accompanying [John McLevey (2021) *Doing Computational Social Science*, Sage, UK](johnmclevey.com). 
 
+1. [Datasets](#datasets)
+2. [Pre-trained Language Models](#pre-trained-language-models)
+3. [Questions and Scaffolded Problem Sets for Each Chapter](#questions-and-scaffolded-problem-sets-for-each-chapter)
+4. [Supplementary Chapter Content and Tutorials](#supplementary-chapter-content-and-tutorials)
+5. [Practical Advice from Other Computational Social Scientists and Data Scientists](#practical-advice-from-other-computational-social-scientists-and-data-scientists)
+6. [Citation Information](#citation-information)
+
 ## Datasets
 
 The `datasets` directory contains all of the data that I used in the book, or in the scaffolded problem sets (see below). It includes:
@@ -22,7 +29,7 @@ Other datasets may be added overtime, depending on what I am teaching in my own 
 
 All of these datasets can be downloaded and managed using [the `dcss` Python package](LINK).
 
-## Pre-trained Models
+## Pre-trained Language Models
 
 The book contains several chapters on contextual embeddings models, including how to train a variety of different types of embedding models over long time periods (e.g., over 100 years of large-scale text data). 
 
@@ -109,7 +116,7 @@ Altogether, we've trained and provided $n$ models here. The list below is an ove
 - [Sasha Graham]() on ...
 - *with many others on the way!*
 
-## Citation
+## Citation Information
 
 For the book: 
 
