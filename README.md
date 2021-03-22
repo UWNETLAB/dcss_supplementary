@@ -16,7 +16,7 @@ What's in here?
 
 ## Datasets
 
-The `datasets` directory contains all of the data that I used in the book, or in the scaffolded problem sets (see below). It includes:
+The `datasets` directory contains all of the dataset that I use in the book or in the accompanying problem sets (see below). They are:
 
 - A filtered and subsetted of the Version 11 [Varieties of Democracy](https://www.v-dem.net/en/data/data/) data, released in 2021.
 - The [Canadian Hansards](LINK), DATE to DATE.
@@ -28,7 +28,7 @@ The `datasets` directory contains all of the data that I used in the book, or in
 - A subset of data from the [European Values Survey](https://europeanvaluesstudy.eu). 
 - A subset of the Russian Trolls dataset collected by CITE and distributed by [fivethirtyeight](https://fivethirtyeight.com/features/why-were-sharing-3-million-russian-troll-tweets/)
 
-Other datasets may be added overtime, depending on what I am teaching in my own classes and using in the problem sets (below), and what others generously make available.
+Other datasets may be added over time, depending on what I am teaching in my own classes and using in the problem sets (below), and what others generously make available.
 
 ### The `dcss` Python package
 
@@ -104,6 +104,10 @@ Altogether, we've trained and provided $n$ models here. The list below is an ove
 
 `questions_and_problem_sets` contains all of the questions and problems associated with each chapter in the book. These materials were developing collaboratively, with much of the work done by my PhD students [Pierson Browne](https://github.com/pbrowne88) and [Tyler Crick](https://github.com/tcrick) in the context of TAing the graduate and undergraduate versions of my Computational Social Science class at University of Waterloo in Winter and Spring 2021. These materials will grow and evolve over time (typically coinciding with semesters when I am teaching Computational Social Science).
 
+## High Resolution Figures
+
+The `figures` directory contains every figure from the book as vector graphics (PDF), and in a few cases (e.g., screenshots of websites) high-resolution PNGs. 
+
 ## Supplementary Chapter Content and Tutorials
 
 `supplementary_content` contains a number of notebooks that go beyond what is covered in the book. As of right now, it contains notebooks on collecting data from social media APIs (Twitter and Reddit) and on web scraping with Selenium. It also contains some additional content on analytical Bayesian inference that is intended to provide some additional clarity on the basic logic of Bayesian inference. If Bayesian inference is new to you, I suggest working through this example after working on Chapters 23 and 24. 
@@ -120,6 +124,10 @@ Altogether, we've trained and provided $n$ models here. The list below is an ove
 - [Tyler Crick]() on ...
 - [Sasha Graham]() on ...
 - *with many others on the way!*
+
+## Course Syllabi
+
+The `course_materials` directory contain the syllabi for my undergraduate and graduate classes in Computational Social Science at the University of Waterloo. I will likely add other materials to this directory over time. 
 
 ## Citation Information
 
