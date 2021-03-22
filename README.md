@@ -32,7 +32,7 @@ Since the models themselves are too large to host in this GitHub repo, we are ho
 
 Altogether, we've trained and provided $n$ models here. The list below is an overview of those models and the data they are trained on. 
 
-- Contextual embedding models trained on the Canadian Hansards data (`pretrained_models/canadian_hansards`).
+- **Contextual embedding models trained on the Canadian Hansards data (`pretrained_models/canadian_hansards`)**.
     - word2vec skip-gram models ($n$ total): 
         - one model for the entire dataset
         - one model for each political party across all years
@@ -53,7 +53,7 @@ Altogether, we've trained and provided $n$ models here. The list below is an ove
         - one model for each political party across all years
         - one model for each decade
         - one model for each political party in each decade 
-- Contextual embedding models trained on the British Hansards data (`pretrained_models/british_hansards`).
+- **Contextual embedding models trained on the British Hansards data (`pretrained_models/british_hansards`)**.
     - word2vec skip-gram models ($n$ total):
         - one model for the entire dataset
         - one model for each political party across all years
@@ -74,7 +74,7 @@ Altogether, we've trained and provided $n$ models here. The list below is an ove
         - one model for each political party across all years
         - one model for each decade
         - one model for each political party in each decade 
-- Contextual embedding models trained on the full text of every publication (including books and book chapters) indexed by JSTOR that mentioned democracy, autocracy, authoritarian, dictatorship, or any variation on those words. As of March 2021, the dataset includes $n$ publications published between YYYY and YYYY. We are, unfortunately, not allowed to share the data these models were trained on, but you can go through the process of getting the same data directly from JSTOR.  (`pretrained_models/democracy_autocracy`)
+- **Contextual embedding models trained on the full text of every publication (including books and book chapters) indexed by JSTOR that mentioned democracy, autocracy, authoritarian, dictatorship, or any variation on those words. As of March 2021, the dataset includes $n$ publications published between YYYY and YYYY.** We are, unfortunately, not allowed to share the data these models were trained on, but you can go through the process of getting the same data directly from JSTOR.  (`pretrained_models/democracy_autocracy`)
     - word2vec skip-gram models ($n$ total):
         - one model for the entire dataset
         - one model for each decade
