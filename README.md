@@ -2,7 +2,7 @@
 
 # Doing Computational Social Science
 
-This repo contains all of the learning materials accompanying [John McLevey (2021) *Doing Computational Social Science*, Sage, UK](johnmclevey.com). 
+This repo contains all of the supplementary materials for [John McLevey (2021) *Doing Computational Social Science*, Sage, UK](johnmclevey.com). 
 
 What's in here? 
 
