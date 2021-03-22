@@ -1,2 +1,3 @@
-# dcss_datasets
-Datasets and data processing scripts accompanying McLevey 2021 Doing Computational Social Science.
+<a href="https://uwaterloo.ca/networks-lab/"><img src="http://www.johnmclevey.com/assets/img/logo.png" width="125"  align="right" /></a>
+
+# Datasets for Doing Computational Social Science
