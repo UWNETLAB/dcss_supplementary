@@ -1,3 +1,43 @@
+(base) john@buffy:/fast-data/john/doing_computational_social_science$ tree
+.
+├── datasets
+│   ├── british_hansards
+│   ├── canadian_hansards
+│   ├── copenhagen_networks_study
+│   ├── elections
+│   ├── european_values_survey
+│   ├── freedom_house
+│   ├── russian_trolls
+│   ├── sociopatterns
+│   └── varieties_of_democracy
+├── figures_high_resolution
+├── LICENSE
+├── pretrained_models
+│   ├── british_hansards
+│   │   ├── complete
+│   │   ├── decades
+│   │   └── parties
+│   ├── canadian_hansards
+│   │   ├── complete
+│   │   ├── decades
+│   │   └── parties
+│   └── democracy_autocracy
+├── questions_and_problem_sets
+│   ├── Chapter_01
+│   ├── Chapter_02
+│   ├── Chapter_03
+│   ├── Chapter_04
+│   ├── Chapter_05
+│   ├── Chapter_06
+│   ├── Chapter_07
+│   ├── Chapter_08
+│   ├── Chapter_09
+│   ├── Chapter_10
+│   ├── Chapter_11
+│   ├── Chapter_12
+│   ├── Chapter_13
+│   ├── Chapter_14
+│   ├── Chapter_15
 <a href="https://uwaterloo.ca/networks-lab/"><img src="http://www.johnmclevey.com/assets/img/logo.png" width="125"  align="right" /></a>
 
 # Learning Materials for *Doing Computational Social Science*
@@ -20,7 +60,7 @@ The `datasets` directory contains all of the data that I used in the book, or in
 
 ## Pre-trained Models
 
-The code used to train a variety of contextual embeddings models, as well as scripts to download the pre-trained models and load them in scripts or notebooks. These models were trained in my lab using our own servers, and will be updated over time as new data is released. 
+The code used to train a variety of contextual embeddings models, as well as scripts to download the pre-trained models and load them in scripts or notebooks. These models were trained in my lab using our own servers, and will be updated over time as new data is released.
 
 - pre-trained models for the Canadian Hansards data
   - (*i*) word2vec skip-gram, word2vec cbow, fastText, gloVe models for (*ii*) all years, by decade, by party, and by decade and party
@@ -28,33 +68,19 @@ The code used to train a variety of contextual embeddings models, as well as scr
   - (*i*) word2vec skip-gram, word2vec cbow, fastText, gloVe models for (*ii*) all years, by decade, by party, and by decade and party
 - for the full text of N journal articles, indexed by JSTOR, on democracies and autocracies
   - (*i*) word2vec skip-gram, word2vec cbow, fastText models for (*ii*) the full corpus and for each decade
- 
+
 ## Questions and Scaffolded Problem Sets for Each Chapter
 
-These are the materials that I use in my own Computational Social Science classes at the University of Waterloo. They are developed collaboratively, many lead by my PhD students [Pierson Browne](https://github.com/pbrowne88) and [Tyler Crick](https://github.com/tcrick) in the context of TAing my Winter and Spring 2021 offerings of INTEG 440 / SOC 440 (undergraduate) and INTEG 640 / SOC 719 (graduate) Computational Social Science classes at the University of Waterloo.  
+These are the materials that I use in my own Computational Social Science classes at the University of Waterloo. They are developed collaboratively, many lead by my PhD students [Pierson Browne](https://github.com/pbrowne88) and [Tyler Crick](https://github.com/tcrick) in the context of TAing my Winter and Spring 2021 offerings of INTEG 440 / SOC 440 (undergraduate) and INTEG 640 / SOC 719 (graduate) Computational Social Science classes at the University of Waterloo.
 
 These materials will grow and evolve over time (typically coinciding with semesters when I am teaching Computational Social Science).
 
 ## Supplementary Chapter Content and Tutorials
 
-Including: 
+Including:
 
 - collecting data from social media platforms, including
   - Twitter
   - Reddit
-- web scraping with Selenium
-- data clustering
-- analytical Bayesian inference
-
-## Practical Advice from Other Computational Social Scientists and Data Scientists
-
-- [Rochelle Terman]() on...
-- [Alix Rule]() on...
-- [Jillian Anderson]() on...
-- [Deena Abul-Fottouh]() on ...
-- [Pierson Browne]() on ...
-- [Tyler Crick]() on ...
-- [Sasha Graham]() on ...
-- *with many others on the way!*
-
-These learning materials will continue to grow and evolve!
+README.md                                                                                                                                                                    1,1            Top
+-- INSERT --
