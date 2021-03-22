@@ -10,11 +10,12 @@ What's in here?
 2. [The `dcss` Python package](#the-dcss-python-package)
 3. [Pre-trained Language Models](#pre-trained-language-models)
 4. [Questions and Problem Sets for Each Chapter](#questions-and-problem-sets-for-each-chapter)
-5. [High Resolution Figures](#high-resolution-figures)
-6. [Supplementary Chapter Content and Tutorials](#supplementary-chapter-content-and-tutorials)
-7. [Practical Advice from Other Computational Social Scientists and Data Scientists](#practical-advice-from-other-computational-social-scientists-and-data-scientists)
-8. [Course Syllabi](#course-syllabi)
-9. [Citation Information](#citation-information)
+5. [DCSS Conda Environment](#dcss-conda-environment)
+6. [High Resolution Figures](#high-resolution-figures)
+7. [Supplementary Chapter Content and Tutorials](#supplementary-chapter-content-and-tutorials)
+8. [Practical Advice from Other Computational Social Scientists and Data Scientists](#practical-advice-from-other-computational-social-scientists-and-data-scientists)
+9. [Course Syllabi](#course-syllabi)
+10. [Citation Information](#citation-information)
 
 ## Datasets
 
@@ -105,6 +106,10 @@ Altogether, we've trained and provided $n$ models here. The list below is an ove
 ## Questions and Problem Sets for Each Chapter
 
 `questions_and_problem_sets` contains all of the questions and problems associated with each chapter in the book. These materials were developing collaboratively, with much of the work done by my PhD students [Pierson Browne](https://github.com/pbrowne88) and [Tyler Crick](https://github.com/tcrick) in the context of TAing the graduate and undergraduate versions of my Computational Social Science class at University of Waterloo in Winter and Spring 2021. These materials will grow and evolve over time (typically coinciding with semesters when I am teaching Computational Social Science).
+
+## DCSS Conda Environment
+
+Coming... 
 
 ## High Resolution Figures
 
