@@ -1,6 +1,6 @@
 <a href="https://uwaterloo.ca/networks-lab/"><img src="http://www.johnmclevey.com/assets/img/logo.png" width="125"  align="right" /></a>
 
-# Doing Computational Social Science (Sage, 2021)
+# Doing Computational Social Science
 
 This repo contains all of the learning materials accompanying [John McLevey (2021) *Doing Computational Social Science*, Sage, UK.](johnmclevey.com). 
 
