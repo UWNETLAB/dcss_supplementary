@@ -31,4 +31,3 @@ dependencies:
     - torch
     - whatlies
     - dcss
-prefix: /home/tyler/anaconda3/envs/dcss-gt
