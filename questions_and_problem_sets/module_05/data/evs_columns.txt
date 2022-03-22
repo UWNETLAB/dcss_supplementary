@@ -1,0 +1,43 @@
+# Religion and Morale
+'v54', # Religious services? - 1=More than Once Per Week, 7=Never
+'v64', # How often do you pray? - 1=More than Once Per Week, 7=Never
+'v149', # Do you justify: claiming state benefits? - 1=Never, 10=Always
+'v150', # Do you justify: cheating on tax? - 1=Never, 10=Always 
+'v151', # Do you justify: taking soft drugs? - 1=Never, 10=Always 
+'v152', # Do you justify: taking a bribe? - 1=Never, 10=Always 
+'v153', # Do you justify: homosexuality? - 1=Never, 10=Always 
+'v154', # Do you justify: abortion? - 1=Never, 10=Always 
+'v155', # Do you justify: divorce? - 1=Never, 10=Always 
+'v156', # Do you justify: euthanasia? - 1=Never, 10=Always 
+'v157', # Do you justify: suicide? - 1=Never, 10=Always 
+'v158', # Do you justify: having casual sex? - 1=Never, 10=Always 
+'v159', # Do you justify: public transit fare evasion? - 1=Never, 10=Always 
+'v160', # Do you justify: prostitution? - 1=Never, 10=Always 
+'v161', # Do you justify: artificial insemination? - 1=Never, 10=Always 
+'v162', # Do you justify: political violence? - 1=Never, 10=Always 
+'v163', # Do you justify: death penalty? - 1=Never, 10=Always 
+
+# Politics and Society
+'v97', # Interested in Politics? - 1=Interested, 4=Not Interested
+'v121', # How much confidence in Parliament? - 1=High, 4=Low
+'v124', # How much confidence in EU? - 1=High, 4=Low
+'v126', # How much confidence in Health Care System? - 1=High, 4=Low
+'v142', # Importance of Democracy - 1=Unimportant, 10=Important
+'v143', # Democracy in own country - 1=Undemocratic, 10=Democratic
+'v145', # Political System: Strong Leader - 1=Good, 4=Bad
+'v146', # Political System: Experts Making Decisions - 1=Good, 4=Bad
+'v147', # Political System: Army Rules the Country - 1=Good, 4=Bad
+'v148', # Political System: Democratic - 1=Good, 4=Bad
+'v208', # How often follow politics on TV? - 1=Daily, 5=Never
+'v211', # How often follow politics on Social Media? - 1=Daily, 5=Never
+
+# National Identity
+'v170', # How proud are you of being a citizen? - 1=Proud, 4=Not Proud
+'v184', # Immigrants: impact on development of country - 1=Bad, 5=Good
+'v185', # Immigrants: take away jobs from Nation - 1=Take, 10=Do Not Take
+'v198', # European Union Enlargement - 1=Should Go Further, 10=Too Far Already
+
+# Socio-demographics
+'v226', # Year of Birth by respondent 
+'v227', # Respondent Born in Country - 1=Yes, 2=No
+'v261_ppp', # Household Monthly Net Income, PPP-Corrected
