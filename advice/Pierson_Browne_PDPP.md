@@ -1,3 +1,8 @@
+# Principled Data Processing in Python 
+
+Pierson Browne   
+University of Waterloo 
+
 One of my all-time favourite films is Danny Boyle’s oft-overlooked Sunshine (2007). It tells a fictional story about how 8 of Earth’s leading astronauts and scientists make a series of well-intentioned, expertise-based decisions which, in aggregate, doom them and their mission. In other words, the movie tells us that a large number of good micro-scale decisions can combine to create one terrible macro-scale outcome.
 
 When I think about the pitfalls I’ve encountered whilst working on collaborative data processing efforts within the academy, I’m often reminded of Sunshine: groups of intelligent scholars are brought together and tasked with coaxing publishable insights from a corpus of raw input data. Such projects are frequently – though unintentionally -- developed following tumultuous, organic logics. Each member is tasked with composing a script or module capable of pushing the pipeline closer to the predefined end goal. Such tasks are frequently allotted along internal perceptions of relative expertise: even in cases where a team commences a project with members who share a relatively homogenous skillset, I’ve found that individual members autonomously seek out and address gaps in the team’s collective wisdom. This tendency towards utilizing (or developing) expertise is useful for getting things done efficiently, but virtually guarantees that no one member of a team will understand how the finished project works or how its constituent pieces fit together. The result is a ‘black box’ which performs one task very well, but can’t be easily understood, changed, fixed, or applied to cases other than the one it was built for.
