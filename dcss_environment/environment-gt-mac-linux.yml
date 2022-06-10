@@ -1,0 +1,33 @@
+name: dcss-gt
+channels:
+  - huggingface
+  - conda-forge
+  - defaults
+dependencies:
+  - graph-tool
+  - mkl
+  - pandas
+  - leidenalg
+  - seaborn
+  - matplotlib
+  - scikit-learn
+  - spacy
+  - spacy-lookups-data
+  - pymc3
+  - cairocffi
+  - pip
+  - numpy==1.19.2
+  - pyldavis
+  - transformers
+  - pip:
+    - beautifulsoup4
+    - gensim==3.8.3
+    - ndlib
+    - networkx
+    - graphviz
+    - python-louvain
+    - pyyaml
+    - tensorflow
+    - torch
+    - whatlies
+    - dcss
