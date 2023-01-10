@@ -1,0 +1,22 @@
+name: dcss-minimal
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pandas
+  - leidenalg
+  - seaborn
+  - matplotlib
+  - scikit-learn
+  - spacy
+  - pymc3
+  - numpy
+  - beautifulsoup4
+  - networkx
+  - python-louvain
+  - pyyaml
+  - pip:
+    - ndlib
+    - graphviz
+    - tensorflow
+    - dcss
