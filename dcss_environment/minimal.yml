@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - python=3.9.15
   - pandas
   - leidenalg
   - seaborn
@@ -16,8 +17,6 @@ dependencies:
   - networkx
   - python-louvain
   - pyyaml
+  - graphviz
   - pip:
-    - ndlib
-    - graphviz
-    - tensorflow
     - dcss
