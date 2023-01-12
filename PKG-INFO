@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dcss
+Version: 1.0.1
+Summary: Utilities for the book Doing Computational Social Science
+Home-page: https://github.com/UWNETLAB/doing_computational_social_science
+Author: John McLevey
+Author-email: john.mclevey@uwaterloo.ca
+License: MIT
+Project-URL: Bug Tracker, https://github.com/UWNETLAB/doing_computational_social_science/issues
+Description: Details about the package...
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
