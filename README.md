@@ -45,7 +45,7 @@ mamba activate dcss
 
 ## What to do if you are on a Windows system and are unable to install the environment
 
-The DCSS environment comes with [Tiago Peixoto's](https://skewed.de/tiago) (`graph-tool`)[http://graph-tool.skewed.de], which is challenging to install on Windows systems. If you are running into this issue and don't have access to a system running linux or macOS, then you can install a version of the DCSS environment that does not include `graph-tool`. That environment is `environment-windows-no-gt.yml`, and you can also find in the root directory. 
+The DCSS environment comes with [Tiago Peixoto's](https://skewed.de/tiago) [`graph-tool`](http://graph-tool.skewed.de), which is challenging to install on Windows systems. If you are running into this issue and don't have access to a system running linux or macOS, then you can install a version of the DCSS environment that does not include `graph-tool`. That environment is `environment-windows-no-gt.yml`, and you can also find in the root directory. 
 
 ```bash
 mamba env create -f environment-windows-no-gt.yml
