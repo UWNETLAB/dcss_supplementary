@@ -9,6 +9,7 @@ dependencies:
   - seaborn
   - matplotlib
   - scikit-learn
+  - spacy
   - pymc3
   - pip
   - numpy
@@ -17,4 +18,5 @@ dependencies:
   - python-louvain
   - pyyaml
   - graphviz
-  - gensim=3.8.3
+  - pip:
+    - dcss

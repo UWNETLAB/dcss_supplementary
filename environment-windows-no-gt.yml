@@ -1,4 +1,4 @@
-name: dcss-gt
+name: dcss
 channels:
   - huggingface
   - conda-forge
