@@ -1,3 +1,5 @@
+<img src="http://www.johnmclevey.com/assets/images/dcss_cover.png" width="125"  align="right"/>
+
 # Doing Computational Social Science
 
 This repo contains all of the supplementary materials for [John McLevey (2021) *Doing Computational Social Science*, Sage, UK](https://uk.sagepub.com/en-gb/eur/doing-computational-social-science/book266031). 
