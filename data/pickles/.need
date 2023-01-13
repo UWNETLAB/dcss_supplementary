@@ -92,3 +92,39 @@ book_chapters/chapter_31_latent_network_structure_stochastic_block_models.ipynb:
   1625     "source": [
   1626:     "topSBM_model = pickle.load( open( '../data/pickles/can_hansard_100k_sample_topSBM.pkl', 'rb'))"
   1627     ]
+
+
+
+book_chapters/chapter_33_ner_transfer_transformers.ipynb:
+
+  1255     "source": [
+  1256:     "sentiment_df.to_pickle('../data/pickles/can_hansard_sentiment.pkl')"
+  1257     ]
+
+  1265      "# run this cell to load the data with everything above analysed already\n",
+  1266:     "sentiment_df = pd.read_pickle('../data/pickles/can_hansard_sentiment.pkl')"
+  1267     ]
+
+  1687      "chretien_block_sentiment_df = calculate_avg_block_sentiment(chretien_results, chretien_df)\n",
+  1688:     "chretien_block_sentiment_df.to_pickle('../data/pickles/chretien_blockmodel_sent_analysis.pkl')"
+  1689     ]
+
+  1697      "# run to load the pickled dataframe\n",
+  1698:     "chretien_block_sentiment_df = pd.read_pickle('../data/pickles/chretien_blockmodel_sent_analysis.pkl')"
+  1699     ]
+
+  1750      "layton_block_sentiment_df = calculate_avg_block_sentiment(layton_results, layton_df)\n",
+  1751:     "layton_block_sentiment_df.to_pickle('../data/pickles/layton_blockmodel_sent_analysis.pkl')"
+  1752     ]
+
+  1760      "# run to load the pickled dataframe\n",
+  1761:     "layton_block_sentiment_df.to_pickle('../data/pickles/layton_blockmodel_sent_analysis.pkl')"
+  1762     ]
+
+  1808      "harper_block_sentiment_df = calculate_avg_block_sentiment(harper_results, harper_df)\n",
+  1809:     "harper_block_sentiment_df.to_pickle('../data/pickles/harper_blockmodel_sent_analysis.pkl')"
+  1810     ]
+
+  1818      "# run to load the pickled dataframe\n",
+  1819:     "harper_block_sentiment_df.to_pickle('../data/pickles/harper_blockmodel_sent_analysis.pkl')"
+  1820     ]

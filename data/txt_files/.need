@@ -21,3 +21,63 @@ book_chapters/chapter_32_neural_word_embeddings.ipynb:
    672     "source": [
    673:     "compass_path = '../data/txt_files/can_hansard_speeches.txt'"
    674     ]
+
+
+book_chapters/chapter_32_neural_word_embeddings.ipynb:
+
+   786      "q = m.Queue()\n",
+   787:     "mp_disk(canadian_1990s, get_sentences, '../data/txt_files/1990s_speeches.txt', q)"
+   788     ]
+
+   798      "q = m.Queue()\n",
+   799:     "mp_disk(canadian_2000s, get_sentences, '../data/txt_files/2000s_speeches.txt', q)"
+   800     ]
+
+   810      "q = m.Queue()\n",
+   811:     "mp_disk(canadian_2010s, get_sentences, '../data/txt_files/2010s_speeches.txt', q)"
+   812     ]
+
+   828     "source": [
+   829:     "model_1990s = aligner.train_slice('../data/txt_files/1990s_speeches.txt', save=True)"
+   830     ]
+
+   838     "source": [
+   839:     "model_2000s = aligner.train_slice('../data/txt_files/2000s_speeches.txt', save=True)"
+   840     ]
+
+   848     "source": [
+   849:     "model_2010s = aligner.train_slice('../data/txt_files/2010s_speeches.txt', save=True)"
+   850     ]
+
+   973      "\n",
+   974:     "mp_disk(datasets, get_sentences_by_party, '../data/txt_files/liberal_speeches.txt', q, liberal)"
+   975     ]
+
+   986      "\n",
+   987:     "mp_disk(datasets, get_sentences_by_party, '../data/txt_files/conservative_speeches.txt', q, conservative)"
+   988     ]
+
+   999      "\n",
+  1000:     "mp_disk(datasets, get_sentences_by_party, '../data/txt_files/ndp_speeches.txt', q, ndp)"
+  1001     ]
+
+  1017     "source": [
+  1018:     "model_liberal = aligner.train_slice('../data/txt_files/liberal_speeches.txt', save=True)"
+  1019     ]
+
+  1027     "source": [
+  1028:     "model_conservative = aligner.train_slice('../data/txt_files/conservative_speeches.txt', save=True)"
+  1029     ]
+
+  1037     "source": [
+  1038:     "model_ndp = aligner.train_slice('../data/txt_files/ndp_speeches.txt', save=True)"
+  1039     ]
+
+
+
+book_chapters/chapter_33_ner_transfer_transformers.ipynb:
+
+
+   112     "source": [
+   113:     "with open('../data/txt_files/ca_story.txt', 'r') as f:\n",
+   114      "    full_text = [line.strip() for line in f]\n",
