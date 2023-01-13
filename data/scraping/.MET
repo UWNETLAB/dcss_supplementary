@@ -1,5 +1,0 @@
-book_chapters/chapter_06_collecting_data_web_scrapers.ipynb:
-  326     "source": [
-  327:     "with open('../data/scraping/guardian_story_links.txt') as f:\n",
-  
-  
