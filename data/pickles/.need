@@ -1,0 +1,130 @@
+
+book_chapters/chapter_12_exploratory_text_analysis.ipynb:
+
+207     "source": [
+208:     "with open('../data/pickles/sampled_british_hansard_speeches.pkl', 'wb') as fp:\n",
+209      "    pickle.dump(sampled_speeches, fp)"
+
+405     "source": [
+406:     "with open('../data/pickles/processed_sample_british_party_subset_hansards.pkl', 'wb') as fp:\n",
+407      "    pickle.dump(preprocessed, fp)\n",
+408      "    \n",
+409:     "with open('../data/pickles/sample_british_party_subset_hansard_bigram_model.pkl', 'wb') as fp:\n",
+410      "    pickle.dump(bigram_model, fp)"
+
+419     "source": [
+420:     "with open ('../data/pickles/processed_sample_british_party_subset_hansards.pkl', 'rb') as fp:\n",
+421      "    preprocessed = pickle.load(fp)"
+
+605     "source": [
+606:     "with open('../data/pickles/brit_hansards_sample_party_subset_count_matrix.pkl', 'wb') as fp:\n",
+607      "    pickle.dump(count_matrix, fp)\n",
+608      "    \n",
+609:     "with open('../data/pickles/brit_hansards_sample_party_subset_vocabulary.pkl', 'wb') as fp:\n",
+610      "    pickle.dump(vocabulary, fp)"
+
+book_chapters/chapter_13_similarity_latent_semantic_space.ipynb:
+73     "source": [
+74:     "with open ('../data/pickles/processed_sample_british_party_subset_hansards.pkl', 'rb') as fp:\n",
+75      "    preprocessed = pickle.load(fp)"
+
+118     "source": [
+119:     "with open ('../data/pickles/brit_hansards_sample_party_subset_count_matrix.pkl', 'rb') as fp:\n",
+120      "    count_matrix = pickle.load(fp)\n",
+
+235     "source": [
+236:     "with open ('../data/pickles/sampled_british_hansard_speeches.pkl', 'rb') as fp:\n",
+237      "    speech_df = pickle.load(fp)\n",
+
+
+
+book_chapters/chapter_30_variational_bayes_probabilistic_topic_models.ipynb:
+
+
+   522     "source": [
+   523:     "with open('../data/pickles/preprocessed_speeches_canadian_hansards_no_bigrams.pkl', 'wb') as handle:\n",
+   524      "    pickle.dump(processed_text, handle, protocol=pickle.HIGHEST_PROTOCOL)"
+
+   533     "source": [
+   534:     "processed_text = pickle.load( open( '../data/pickles/preprocessed_speeches_canadian_hansards_no_bigrams.pkl', 'rb'))"
+   535     ]
+
+   695     "source": [
+   696:     "with open('../data/pickles/lda_model_sample.pkl', 'wb') as handle:\n",
+   697      "    pickle.dump(ldamod_s, handle, protocol=pickle.HIGHEST_PROTOCOL)"
+
+   706     "source": [
+   707:     "ldamod_s = pickle.load(open( '../data/pickles/lda_model_sample.pkl', 'rb'))"
+   708     ]
+
+   986     "source": [
+   987:     "with open('../data/pickles/coherence_model_sample.pkl', 'wb') as handle:\n",
+   988      "    pickle.dump(coherence_model_s, handle, protocol=pickle.HIGHEST_PROTOCOL)"
+
+   997     "source": [
+   998:     "coherence_model_s = pickle.load( open( '../data/pickles/coherence_model_sample.pkl', 'rb'))"
+   999     ]
+
+  1212     "source": [
+  1213:     "with open('../data/pickles/lda_model_full.pkl', 'wb') as handle:\n",
+  1214      "    pickle.dump(ldamod_f, handle, protocol=pickle.HIGHEST_PROTOCOL)"
+
+  1223     "source": [
+  1224:     "ldamod_f = pickle.load( open( '../data/pickles/lda_model_full.pkl', 'rb'))"
+  1225     ]
+
+  1247     "source": [
+  1248:     "with open('../data/pickles/coherence_model_full.pkl', 'wb') as handle:\n",
+  1249      "    pickle.dump(coherence_model_full, handle, protocol=pickle.HIGHEST_PROTOCOL)"
+
+  1258     "source": [
+  1259:     "coherence_model_full = pickle.load( open( '../data/pickles/coherence_model_full.pkl', 'rb'))"
+  1260     ]
+
+
+book_chapters/chapter_31_latent_network_structure_stochastic_block_models.ipynb:
+
+
+  1615      "\n",
+  1616: ⟪ 403 characters skipped ⟫hip between topic modeling and community detection and blockmodelling, I recommend reading @gerlach2018network. If you just want to take a look at some results, there is a pickle available in the `../data/pickles` directory, and a few example topics in a dataframe below. This model was run on a 100K random sample of the Canadian Hansards and took quite a long time to complete."
+  1617     ]
+
+  1625     "source": [
+  1626:     "topSBM_model = pickle.load( open( '../data/pickles/can_hansard_100k_sample_topSBM.pkl', 'rb'))"
+  1627     ]
+
+
+
+book_chapters/chapter_33_ner_transfer_transformers.ipynb:
+
+  1255     "source": [
+  1256:     "sentiment_df.to_pickle('../data/pickles/can_hansard_sentiment.pkl')"
+  1257     ]
+
+  1265      "# run this cell to load the data with everything above analysed already\n",
+  1266:     "sentiment_df = pd.read_pickle('../data/pickles/can_hansard_sentiment.pkl')"
+  1267     ]
+
+  1687      "chretien_block_sentiment_df = calculate_avg_block_sentiment(chretien_results, chretien_df)\n",
+  1688:     "chretien_block_sentiment_df.to_pickle('../data/pickles/chretien_blockmodel_sent_analysis.pkl')"
+  1689     ]
+
+  1697      "# run to load the pickled dataframe\n",
+  1698:     "chretien_block_sentiment_df = pd.read_pickle('../data/pickles/chretien_blockmodel_sent_analysis.pkl')"
+  1699     ]
+
+  1750      "layton_block_sentiment_df = calculate_avg_block_sentiment(layton_results, layton_df)\n",
+  1751:     "layton_block_sentiment_df.to_pickle('../data/pickles/layton_blockmodel_sent_analysis.pkl')"
+  1752     ]
+
+  1760      "# run to load the pickled dataframe\n",
+  1761:     "layton_block_sentiment_df.to_pickle('../data/pickles/layton_blockmodel_sent_analysis.pkl')"
+  1762     ]
+
+  1808      "harper_block_sentiment_df = calculate_avg_block_sentiment(harper_results, harper_df)\n",
+  1809:     "harper_block_sentiment_df.to_pickle('../data/pickles/harper_blockmodel_sent_analysis.pkl')"
+  1810     ]
+
+  1818      "# run to load the pickled dataframe\n",
+  1819:     "harper_block_sentiment_df.to_pickle('../data/pickles/harper_blockmodel_sent_analysis.pkl')"
+  1820     ]

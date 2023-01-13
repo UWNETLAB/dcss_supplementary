@@ -1,0 +1,124 @@
+Cambridge Analytica a year on: ‘a lesson in institutional failure’
+It’s a measure of how much has changed in a year that, last month the UK, parliament published an official report that called Facebook “digital gangsters” and said that Britain’s electoral laws no longer worked. It was a report that drew on hours of testimony from Cambridge Analytica directors, Facebook executives and dozens of expert witnesses: 73 in total, of whom MPs had asked 4,350 questions. And its conclusion? That Silicon Valley’s tech platforms were out of control, none more so than Facebook, which it said had treated parliament with “contempt”.
+
+And it’s a measure of how much hasn’t changed that this was a news story for just two hours on a Monday morning before the next Westminster drama – the launch of the Independent Group – knocked it off the headline slots.
+
+It was a year ago this weekend that the Observer published the first in a series of stories, known as the Cambridge Analytica Files, that led to parliament grappling with these questions. The account of a whistleblower from inside the data analytics firm that had worked in different capacities – the details are still disputed – on the two pivotal campaigns of 2016 that gave us Brexit and Trump.
+
+Christopher Wylie, a 28-year-old Canadian and former research director at Cambridge Analytica, revealed how the company had exploited Facebook data harvested from millions of people across the world to profile and target them with political messages and misinformation, without their knowledge or consent.
+
+What followed can only be described as a media firestorm. The story made headlines all over the world. In the week after we published Wylie’s interview, Britain’s information commissioner obtained a warrant to enter Cambridge Analytica’s offices and seize its servers. Questions were asked in parliament. Facebook’s share price plunged more than $50bn. It has now fallen well over twice that.
+
+The affair raged for months. Cambridge Analytica rode it out, initially, but finally called in the administrators in May. In April Facebook admitted it wasn’t 50 million users who had had their profiles mined, as we had reported, it was actually 87 million users. Mark Zuckerberg was hauled before US congress. And in October the Information Commissioner’s Office fined Facebook its maximum possible penalty – £500,000 (which Facebook is appealing against).
+
+When I meet Wylie to discuss the story a year on, I ask if he’s managed to process it all yet – the impact, the fallout, the loss of billions of dollars.
+
+“No,” he says. “I mean… how do you fathom a billion dollars? I’ve never seen a billion dollars. I don’t think anybody has. Maybe the US Treasury. But no, I can’t fathom that.”
+
+The year has been like a mirage, he says. “A lot of those months didn’t feel real. It felt like being in la-la land.”
+
+Wylie became a public figure overnight. And the story triggered what, in many ways, looks like a year of reckoning for the tech industry. Damian Collins, the chair of the Department of Culture, Media and Sport’s 18-month-long fake news inquiry, which delivered last month’s report, described the story’s publication as a “pivotal moment” when “public attitudes and government policy towards the tech companies started to change”.
+
+Last week, on the 30th anniversary of the worldwide web, its creator Tim Berners-Lee urged people to stop the “downward plunge” to “a dysfunctional future” that the Cambridge Analytica scandal had helped expose. It was, Berners-Lee said, the moment people realised that “elections had been manipulated using data that they contributed”.
+
+The problem is that while the tech companies have been called to account, they haven’t actually been held accountable. In November, after Zuckerberg refused to comply with a summons to parliament to answer questions about Facebook’s role in the scandal, Collins convened an international committee of nine parliaments. Zuckerberg refused to come to that too.
+
+Jason Kint, the Washington-based chief executive of the trade association Digital Content Next, and a tech industry expert, describes Facebook’s refusal to answer parliament’s questions about its role in the scandal as “the greatest cover-up in the history of the internet”. He has followed the fallout in minute detail, and all the subsequent parliamentary and congressional hearings, waiting for answers that never came.
+
+The story was about how a company was able to use and abuse our personal information to target us in ways we can’t even see, let alone understand. But the scandal that followed seems to reveal something far more shocking. That Facebook is not just bigger than any nation state on Earth, with 1.74 billion users, and plays a pivotal role in their elections, but that it’s completely out of control.
+
+“This may be the first time in history where a company literally controlled by one person appears to be unaccountable to anyone anywhere on Earth,” says Kint.
+
+A year ago, we knew none of this. This weekend is the anniversary of the story’s publication, but it’s almost two years since I met Wylie. We always knew the story would strike a blow against Cambridge Analytica. It’s why both he and I spent a year of our lives working on it. And why I shared my research with Channel 4 News, to enable their undercover filming of Cambridge Analytica bosses, and with the New York Times. But neither of us had realised quite how calamitous an effect it would have on Facebook.
+
+“Well, yes and no,” Wylie says. “Because what we did not anticipate was how Facebook would continuously shoot themselves in the foot. It was fair to assume it would have an impact on Facebook, but not that it would be a catastrophic crisis. But I think what the story really did was it forced them to show their cards.”
+
+That included threatening the Observer with legal action the day before we went to press. And making aggressive PR moves in the middle of the night: with hours to go before publication, Facebook published a statement saying that it had banned both Cambridge Analytica and Wylie from its platform. And, we learned from a New York Times article in November, Facebook then hired a PR firm to launch a seemingly antisemitic smear campaign claiming that key critics of the company were funded by George Soros.
+
+“Facebook showed that they don’t care,” says Wylie. “They’re bullies. And they know they’re bullies. This whole aura around them of being the good guys is complete bullshit.”
+
+Wylie appeared before Collins’s parliamentary committee just over a week after the initial Observer story. Since then – in what he describes as his “global testimony tour” – he has testified to Congress and given evidence to regulators and lawmakers from across the world. He testified to the European parliament “and to the [US] House Intelligence Committee for something like five hours. I’ve testified multiple times to the House Intelligence Committee. And also the House Judiciary and Senate Judiciary.” In the US, the FBI is also investigating, as is the Department of Justice, the Securities Exchange Commission, 38 state attorney generals and the Federal Trade Commission (FTC), all triggered by the story. The FTC is expected to impose a fine that will run into billions. Wylie gave evidence to pretty much all of them.
+
+He tells me about an evidence session in the “secure sub-basement beneath the basement at Congress”. The same day, he was subpoenaed by the Department of Justice and the FBI. “They knew where to find me.”
+
+The ultimate consequences of the story, of Wylie’s evidence, aren’t yet known. But Jamie Bartlett, a journalist and author of The People Vs Tech, believes that the story has had a bigger impact on the public than Edward Snowden’s, and transformed the way politicians talk about big tech.
+
+“But especially Facebook,” says Bartlett. “Just yesterday, the Democrat presidential hopeful Elizabeth Warren said she wants Facebook broken up. She wouldn’t have said this without the Cambridge Analytica story. And this change in political tone is hugely significant.”
+
+David Carroll, a New York professor who sued Cambridge Analytica to get his data back, describes the story as a “cataclysm”, which he believed exposed the company as “the original gangster of rogue actors in the dark world of influence”. Which makes Facebook the capo di capi, the boss of bosses.
+
+Wylie’s role in the story is over, for now. His testimony tour has ended. He has a new job and we’re sitting in the London office of his new employer, Swedish global fashion brand H&M, where he’s the new head of data research. I think some people were surprised, I say, when they learned of his move.
+
+“What do you mean?” he says.
+
+Well, I think because you’d been out there championing the threat to democracy, it was unclear what you’d do next.
+
+“What people forget is that no one pays you to go and be a champion for democracy. A girl’s got to make rent. I didn’t have a job for two years.”
+
+The office is all clean, white, Scandinavian lines. Sunlight pours through the window on to the minimalist design features and artfully arranged pot plants. It’s an almost absurd contrast from where we were a year go. My overriding impression of the months before publication, I tell him, when we were working with lawyers on how to break his non-disclosure agreement and trying to prove the public interest case, and dealing with other news organisations, is of this long and dark and scary winter. “Well it was,” he says. “It was stressful. And chaotic. And consuming.”
+
+It was an unsettling period, weird, difficult and paranoid-making.
+
+“It was also like dealing with a bit of a phantom enemy,” he says. “Which is not to say that there weren’t real enemies, but we didn’t quite know who they were. There were so many possibles.”
+
+There were. Not just Cambridge Analytica but a web of stories about interlinked individuals, multinational companies and private security firms. There was one angle that involved ex-Mossad agents; another with connections to major figures in the British establishment; another leading to the cash-for-passports trade. It seemed anything was possible; that nothing could be ruled out.
+
+All our communication on this story was done via Signal, an encrypted app. Documents were kept on offline computers. At one point, Wylie collapsed and ended up in hospital (he suspected poisoning). At another, he was photographed in the street on the way to his lawyer’s office and the photo was texted to him from an unknown number. He never found out who sent it.
+
+He tells me about another incident last year. While staying in a New York hotel, he woke up in the middle of the night to see two men in masks. They stole his phone and laptop, but left without taking $1,000 he had in cash. The New York police tracked them to New Jersey, he says, but he has no idea who they were.
+
+Our paths have diverged in the past year, and Wylie has been in the eye of the storm, but even from the sidelines I’ve experienced some of the insanity, not least the sense of unreality seeing Cambridge Analytica go from being my specialist subject to watching Zuckerberg answer questions on it before Congress. And we still share enemies: both Wylie and I have been constant targets of the right-wing blogsite Guido Fawkes, attack pieces by BuzzFeed, abusive tweets from the BBC’s Andrew Neil. And my skin crawls when he mentions that at a cybersecurity conference in Israel, an agent from the private security firm Black Cube introduced himself and apparently told him to “pass on his regards to Carole”.
+
+But for everything that did happen in the past year, and for all the heat and noise the story made, there’s still so much we don’t know.
+
+“I was asked by a journalist to sum up the story in a minute,” he says, “and I was like: ‘No’. It goes from Trump to Brexit to Russian espionage to military operations in Afghanistan to hacking the president of Nigeria. Where do you even begin?”
+
+He’s referring to the fact that Cambridge Analytica was part of a much bigger company, SCL, which had worked as a defence contractor for governments and militaries around the world, then branched into elections in developing countries, and, only in its final iteration, entered western politics. That’s one of the things, he says, that “frustrates me about how dominant the Facebook angle of the story was, when there’s so much fucked-up shit that Cambridge Analytica were doing in different parts of the world. But if you go to a developing country and do grossly unethical things, that’s not ‘newsworthy’.”
+
+For me, Cambridge Analytica was the entry point to a story that is not about technology per se. It is about the abuse of power, and standing up to power. And it has revealed the limits of this in so many ways. Certainly, Wylie felt so viscerally. Because while he’s delighted with his new job, with its Scandi coolness and global reach – he slots me in between trips to Stockholm and South Africa – he really joined H&M because he thinks he can “accomplish more here than in politics. This is something I’ve realised.” He talks excitedly about how “we are the only fashion brand I know of that has started putting together an ethical AI policy team”. Before all this, he says, he had “some level of confidence with the authorities. Whereas now, I don’t.
+
+“I feel like the whole story is a lesson in institutional failure. Because although Facebook paid the price in its share value, there have been virtually no consequences for people who have committed unlawful acts.
+
+“When you look at how, for example, the NCA [National Crime Agency] has just sat on blatant evidence of Russian interference in Brexit,” Wylie says. “When you look at how you can go and commit the largest infraction of campaign finance law in British history and get away with it.”
+
+If it wasn’t so tragic, it would be funny to Wylie that one of the biggest takeaways of the story – which was generating 34,000 news stories a day at its height and cost one of the biggest companies on Earth billions – is how it failed. The Brexit angle of the Cambridge Analytica Files, the explosive revelations of a second whistleblower, Shahmir Sanni, fell inexplicably flat. Sanni revealed in the Observer how Vote Leave deliberately broke the law in the way it funnelled money to the data firm AggregateIQ, an associate company of Cambridge Analytica. It’s believed to be the biggest breach of electoral law in a century, but it was given minimal coverage by the BBC and all but ignored by Britain’s political class. The law-breaking was confirmed by the electoral commission in July, and it has now been referred to the police.
+
+“The thing is that there was such a huge weight of evidence which has now all been proven,” says Wylie. “Vote Leave broke the law. I can say that out loud now. Vote Leave broke the law. But nothing happened. It’s insane to me that people get more upset by doping in the Olympics, when the consequence of this is an irreversible change to the constitutional settlement of the country.”
+
+Perhaps what the scandal has really revealed is a situation that is too embarrassing, too disastrous to acknowledge. We know that Facebook has been used to undermine elections all across the world, including our own. But we’re in this strange historical moment where we’ve realised it, but we don’t have the power, currently, to do anything about it.
+
+Is that why the British government has ignored the DCMS report, I ask Martin Moore, director of the Centre for the Study of Media, Communication and Power at King’s College London and the author of Democracy Hacked. “Yes, I think so,” he says. “On the one hand, this drew the curtain back. But on the other, it’s like a driver going past a car wreck: we’re transfixed by it, but we have no idea what to do about it. In a way it’s better than thinking there’s any one small change that will do it. I think we’re just at the beginning of recognising the scale of this. We’re in the middle of a huge transition, the fourth great communications transition after speech, writing and printing. And even breaking up Facebook is not going to save us from this. It’s so much bigger than that.”
+
+He points out that every previous transition on this scale has been followed by war and upheaval. “And I do worry about increasing polarisation that we can see happening everywhere.” He’s talking about the stories we see reported every day: gilets jaunes in France, neo-Nazis in Charlottesville, Virginia, Tommy Robinson’s antics in the UK. But they’re rarely understood to be connected by the same deep technological undertow. Just days after I file this story, a mass shooter opens fire in a New Zealand mosque and live-streams the massacre on Facebook. A killing designed as a viral video. Which immediately goes viral. At times like these, it’s almost impossible to keep the despair at bay.
+
+In the meantime, while Robert Mueller in the US painstakingly sets out the evidence of how Russia subverted Facebook during the presidential election, we know almost nothing about what happened in Britain. Collins’s parliamentary committee – citing Arron Banks’s covert meetings with Russian embassy staff that were first revealed in the Observer, and the role of Russian paid-for propaganda – has called for an independent investigation into foreign interference, but it’s a call both the government and the leader of the opposition have utterly ignored.
+
+Wylie won’t say what he talked about to the FBI, but he’s full of praise for the ICO: “I just think Elizabeth Denham [the information commissioner] has done an amazing job. She’s shown the world what data protection should look like.” His FBI grilling, on the other hand, involved a “room full of men who were totally expressionless for hours on end. It was quite intimidating.”
+
+I’ve seen very little of Wylie over the past year. He vanished, more or less. And although he was initially heavily involved in the Fair Vote campaign, he’s moved on from that. There have been so grumblings from his friends, but even before he became famous overnight and acquired a Hollywood agent – the William Morris Endeavor agency – he was exacting in his demands. It was a point of amusement at the Byline festival last summer that Damian Collins spent the festival with his family in a yurt, whereas Wylie insisted on a chauffeur back and forth to his flat in London.
+
+I was with him, however, in parliament on the day in June that Cambridge Analytica’s former CEO, Alexander Nix, gave evidence. Nix, an Old Etonian, had been forced to step down from the firm after Channel 4’s undercover film revealed he’d offered potential clients special election services that included flying in “beautiful Ukrainian girls” to entrap politicians. Wylie was there, for the whole thing, his tics going madly – he jiggles his leg in moments of stress and it jiggled almost continuously for hours of testimony, his eyes never leaving Nix.
+
+Does he have any sympathy for him? “No, none,” he says without pause. “Because one of the things I realised about Alexander Nix is that he was born in the wrong century. He is the type of person that would have been ideal at the height of the British Empire to go and become a governor of a colony, because he’s the right station and class and went to Eton and all that. So the terra nova of the internet is the perfect environment for someone like Nix. There are no rules. You can do whatever you want. You go in and exploit people as resources.”
+
+Yes, I say, but he is also a person. He’s been humiliated. He’s lost his business. He has children who will read about all this one day. On a human level…
+
+“And?”
+
+Well…
+
+“I’m sorry, I do not feel bad for somebody who was born of so much privilege. He decides to create a company that colonises the rest of the world and exploits people when he didn’t have to do that. Of all the things that he could have done in life, that is what he chose to do; so no, I do not feel sorry.”
+
+It was only in the final days before publication of the story that I began to realise how large Nix loomed in Wylie’s life – how Wylie’s relationship with his former boss informed his story in many ways.
+
+I ask what he did the day Cambridge Analytica went bankrupt. “I didn’t do anything. It’s kind of interesting because I didn’t feel joy or anything. It felt almost like euthanising a dog. There’s relief but I don’t think… like, it wasn’t a happy moment.” He says he’s become “more forgiving” of himself in the past year. “But it’s in part because the company doesn’t exist any more.” And then he admits something for the first time: “I felt huge amounts of shame for having been part of it. And I don’t think I could have forgiven myself for it until it was stopped.”
+
+It’s a big admission, or self-realisation. Because for the entire year I was talking to him, he’d never recognised shame as an emotion that he was feeling, or that was fuelling him. Or acknowledged responsibility in any meaningful way. And it’s only now that it’s gone that it seems safe to do so.
+
+Here in H&M’s office, Wylie is genuinely enthused about his new job. Though there’s something almost suspiciously wholesome about it, I say. You’re such a machinator, I point out. There’s nothing I have seen Wylie do that he enjoyed more than plotting some political scheme. He loves being the spider in the middle of the web. Don’t you miss it? Won’t you get bored? Are you going to accidentally start weaponising T-shirts?
+
+“I still follow politics and I know a lot of people who work in it, but the extent of my involvement is going once in a while to parliament and drink the warm stale beer that they have in their shit bars. But the problem with politics is that it’s so all-consuming.”
+
+Will there be a second act, a third act, in politics, I ask.
+
+“God, I hope not.”
