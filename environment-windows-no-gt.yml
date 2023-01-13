@@ -4,7 +4,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.9.15
+  - python
   - mkl
   - pandas
   - leidenalg
@@ -21,7 +21,7 @@ dependencies:
   - transformers
   - pip:
     - beautifulsoup4
-    - gensim==3.8.3
+    - gensim
     - ndlib
     - networkx
     - graphviz
