@@ -1,0 +1,8 @@
+book_chapters/chapter_07_processing_structured_data.ipynb:
+  1388      "import os\n",
+  1389:     "data_dir = os.listdir(\"../data/russian-troll-tweets/\")\n",
+  1390      "\n",
+  
+  1393      "tweets_df = pd.concat((pd.read_csv(\n",
+  1394:     "    f'{\"../data/russian-troll-tweets/\"}/{f}', \n",
+  1395      "    encoding='utf-8', low_memory=False) for f in files), ignore_index=True)\n",
