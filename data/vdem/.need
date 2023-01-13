@@ -1,0 +1,4 @@
+book_chapters/chapter_07_processing_structured_data.ipynb:
+    86      "\n",
+    87: ⟪ 764 characters skipped ⟫evelopments. You can find the full codebook online, and I strongly recommend that you download it and consult it as you work with this data. You can find the full dataset at (https://www.v-dem.net/en/data/data/v-dem-dataset-v11/) and the codebook here (https://www.v-dem.net/media/filer_public/e0/7f/e07f672b-b91e-4e98-b9a3-78f8cd4de696/v-dem_codebook_v8.pdf). The filtered and subsetted version we will use in this book is provided in the `data/vdem` directory of the online learning materials.\n",
+    88      "\n",
