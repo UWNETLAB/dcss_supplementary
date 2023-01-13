@@ -15,7 +15,7 @@ dependencies:
   - pymc3
   - cairocffi
   - pip
-  - numpy==1.19.2
+  - numpy
   - pyldavis
   - transformers
   - pip:
