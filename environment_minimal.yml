@@ -1,9 +1,9 @@
-name: dcss-minimal
+name: dcss
 channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.9.15
+  - python
   - pandas
   - leidenalg
   - seaborn
