@@ -1,0 +1,8 @@
+book_chapters/chapter_31_latent_network_structure_stochastic_block_models.ipynb:
+  256     "source": [
+  257:     "edges_df = pd.read_csv('../data/enron/enron_full_edge_list.csv')\n",
+  258      "edges_df.head()"
+
+  291     "source": [
+  292:     "employee_df = pd.read_csv('../data/enron/enron_employees_updated.csv')\n",
+  293      "employee_df.head()"

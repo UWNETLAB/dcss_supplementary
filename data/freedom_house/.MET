@@ -1,0 +1,5 @@
+book_chapters/chapter_07_processing_structured_data.ipynb:
+
+  1875     "source": [
+  1876:     "freedom_df = pd.read_csv( \"../data/freedom_house/internet_freedoms_2020.csv\")"
+  1877     ]

@@ -1,0 +1,9 @@
+book_chapters/chapter_17_epidemic_spread_simple_contagions.ipynb:
+  686     "source": [
+  687:     "bluetooth_contact = pd.read_csv(\"../data/copenhagen_networks_study/cns_bluetooth_filtered.csv\", sep=',')\n",
+  688      "bluetooth_contact.head()"
+
+book_chapters/chapter_18_diffusion_complex_contagions.ipynb:
+  168      "\n",
+  169:     "bluetooth_contact = pd.read_csv(\"../data/copenhagen_networks_study/cns_bluetooth_filtered.csv\", sep=',')\n",
+  170      "g_bluetooth_contact = nx.from_pandas_edgelist(bluetooth_contact, 'user_a', 'user_b', create_using=nx.Graph())\n",
