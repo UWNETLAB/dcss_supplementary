@@ -1,0 +1,10 @@
+
+book_chapters/chapter_30_variational_bayes_probabilistic_topic_models.ipynb:
+   424     "source": [
+   425:     "df = pd.read_csv('../data/canadian_hansards/lipad/canadian_hansards.csv', low_memory=False)"
+   426     ]
+
+book_chapters/chapter_32_neural_word_embeddings.ipynb:
+   429     "source": [
+   430:     "datasets = list_files(\"../data/canadian_hansards/lipad/\", 'csv')\n",
+   431      "len(datasets)"

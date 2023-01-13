@@ -1,0 +1,23 @@
+book_chapters/chapter_10_processing_language_data.ipynb:
+  171     "source": [
+  172:     "with open('../data/txt_files/bonikowski_2017.txt', 'r') as f:\n",
+  173      "    abstract = f.read()"
+
+
+book_chapters/chapter_32_neural_word_embeddings.ipynb:
+
+   491      "q = m.Queue()\n",
+   492:     "mp_disk(datasets, get_sentences, '../data/txt_files/can_hansard_speeches.txt', q)"
+   493     ]
+
+   509     "source": [
+   510:     "with open('../data/txt_files/can_hansard_speeches.txt') as file:\n",
+   511      "    data = file.read()\n",
+
+   538     "source": [
+   539:     "sentences = IterSents('../data/txt_files/can_hansard_speeches.txt')\n",
+   540      "\n",
+
+   672     "source": [
+   673:     "compass_path = '../data/txt_files/can_hansard_speeches.txt'"
+   674     ]

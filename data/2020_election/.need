@@ -1,0 +1,9 @@
+book_chapters/chapter_28_bayesian_regression_modelling.ipynb:
+  90     "source": [
+  91:     "df = pd.read_csv('../data/2020_election/2020_districts_combined.csv')\n",
+  92      "df.head()"
+
+book_chapters/chapter_29_bayesian_hierarchical_regression.ipynb:
+  110     "source": [
+  111:     "df = pd.read_csv('../data/2020_election/2020_districts_combined.csv')\n",
+  112      "\n",
