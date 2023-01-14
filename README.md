@@ -52,6 +52,18 @@ mamba env create -f environment-windows-no-gt.yml
 mamba activate dcss
 ```
 
+# THE DCSS ENVIRONMENT AND JUPYTER
+
+Installing the DCSS environment only helpful if you can make use of it in your development environment of choice. Throughout the book, we assume that you're using Jupyter (lab/notebook) to follow along with the code examples. To run code in the DCSS environment from within Jupyter, perform the following steps:
+
+1. Activate the DCSS environment using `conda activate dcss`
+2. Register the DCSS environment as a Jupyter kernel using `python -m ipykernel install --user --name=dcss`
+
+If, when attempting this, you receive an error about `ipykernel` not being installed, you can install it using `conda install ipykernel` while the DCSS environment is active. 
+
+If successful, you should be able to select a `dcss` kernel from the 'Change Kernel' menu in Jupyter (typically found in the 'Kernel' dropdown at the top of the screen). 
+
+
 # THE DCSS PACKAGE
 
 You can install the `dcss` package using pip: 
