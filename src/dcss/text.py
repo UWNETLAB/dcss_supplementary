@@ -22,6 +22,13 @@ import matplotlib.pyplot as plt
 from spacy.training import Example
 
 def bigram_process(texts, nlp=nlp, threshold=0.75, scoring='npmi', detokenize = True, n_process = 1):
+    
+    avail_cpu = os.cpu_count()
+    if n_process > avail_cpu and avail_cpu > 1:
+        n_process = avail_cpu -1
+    elif avail_cpu == 1:
+        n_process = avail_cpu
+        
     sentences = []
     docs = []
 
@@ -61,7 +68,13 @@ def bigram_process(texts, nlp=nlp, threshold=0.75, scoring='npmi', detokenize = 
     
 
 def preprocess(texts, nlp=nlp, bigrams=False, detokenize=True, n_process = 1, custom_stops=[]):
-
+    
+    avail_cpu = os.cpu_count()
+    if n_process > avail_cpu and avail_cpu > 1:
+        n_process = avail_cpu -1
+    elif avail_cpu == 1:
+        n_process = avail_cpu
+        
     processed_list = []    # list to store the final results
     # parts of speech to tell spaCy to keep
     allowed_postags = [92, 96, 84] # equivalent to: allowed_postags = ['NOUN', 'PROPN', 'ADJ']
