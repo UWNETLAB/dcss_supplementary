@@ -1,0 +1,35 @@
+name: dcss
+channels:
+  - apple
+  - huggingface
+  - conda-forge
+  - defaults
+dependencies:
+  - graph-tool
+  - mkl
+  - pandas
+  - leidenalg
+  - seaborn
+  - matplotlib
+  - scikit-learn
+  - spacy
+  - spacy-lookups-data
+  - pymc3
+  - cairocffi
+  - pip
+  - numpy
+  - pyldavis
+  - transformers
+  - tensorflow-deps
+  - pip:
+    - beautifulsoup4
+    - gensim
+    - ndlib
+    - networkx
+    - graphviz
+    - python-louvain
+    - pyyaml
+    - tensorflow-macos
+    - tensorflow-metal
+    - torch
+    - dcss
