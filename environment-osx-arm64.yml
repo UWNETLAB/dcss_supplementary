@@ -33,3 +33,4 @@ dependencies:
     - tensorflow-metal
     - torch
     - dcss
+    - lxml
