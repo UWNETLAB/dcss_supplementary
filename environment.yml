@@ -21,6 +21,7 @@ dependencies:
   - transformers
   - pip:
     - beautifulsoup4
+    - lxml
     - gensim
     - ndlib
     - networkx
