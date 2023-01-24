@@ -23,6 +23,7 @@ dependencies:
   - tensorflow-deps
   - pip:
     - beautifulsoup4
+    - lxml
     - gensim
     - ndlib
     - networkx
