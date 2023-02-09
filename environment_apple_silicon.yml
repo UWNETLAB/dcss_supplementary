@@ -33,6 +33,7 @@ dependencies:
   - tensorflow-deps             = 2.5.0
   - transformers                = 4.4.2
   - pip:
+    - whatlies                  == 0.6.3
     - tensorflow-macos          == 2.5.0
     - tensorflow-metal          == 0.1.1
     - graphviz                  == 0.17
