@@ -1,31 +1,44 @@
 name: dcss
 
 channels:
+  - huggingface
   - conda-forge
   - defaults
 dependencies:
-  - python        = 3.9.4
-  - pip           = 21.1
-  - pandas        = 1.2.4
-  - leidenalg     = 0.8.4
-  - seaborn       = 0.11.2
-  - matplotlib    = 3.4.2
-  - scikit-learn  = 0.24.2
-  - spacy         = 3.0.6
-  - pymc3         = 3.11.2
-  - numpy         = 1.20.3
-  - beautifulsoup4= 4.10.0
-  - networkx      = 2.5.1
-  - python-louvain= 0.15
-  - pyyaml        = 5.4.1
-  - pyprojroot    = 0.2.0
-  - arviz         = 0.11.2
-  - joblib        = 1.0.1
-  - gensim        = 3.8.3
+  - arviz                       = 0.11.2
+  - beautifulsoup4              = 4.10.0
+#   - cairocffi                   = 1.2.0
+  - gensim                      = 3.8.3  
+#   - graph-tool                  = 2.43
+  - joblib                      = 1.0.1
+  - leidenalg                   = 0.8.4
+  - matplotlib                  = 3.4.2
+#   - mkl                         = 2021.2.0
+  - networkx                    = 2.5.1
+  - numpy                       = 1.20.3
+  - pandas                      = 1.2.4
+  - pip                         = 21.1
+#   - pyldavis                    = 3.3.1
+  - pymc3                       = 3.11.2
+  - pyprojroot                  = 0.2.0
+  - python                      = 3.9.4
+  - python-louvain              = 0.15
+  - pyyaml                      = 5.4.1
+  - scikit-learn                = 0.24.2
+  - seaborn                     = 0.11.2
+  - spacy                       = 3.0.6
+#   - spacy-lookups-data          = 1.0.0
+  - spacy-model-en_core_web_sm  = 3.0.0
+#   - tensorflow                  = 2.4.1
+#   - transformers                = 4.4.2
   - pip:
-    - graphviz    == 0.17
-    - lxml        == 4.6.3
-    - html2text   == 2020.1.16
-    - dcss        == 1.0.2
+    - lxml                      == 4.6.3
+    - graphviz                  == 0.17
+    - html2text                 == 2020.1.16
+    - dcss                      == 1.0.2
+#     - ndlib                     == 5.1.0
+#     - torch                     == 1.8.1
+
+
 
 
