@@ -18,6 +18,7 @@ dependencies:
   - numpy                       = 1.20.3
   - pandas                      = 1.2.4
   - pip                         = 21.1
+  - pydot                       = 1.4.2
   - pyldavis                    = 3.3.1
   - pymc3                       = 3.11.2
   - pyprojroot                  = 0.2.0
