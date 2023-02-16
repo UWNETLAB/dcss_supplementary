@@ -30,9 +30,9 @@ dependencies:
   - spacy                       = 3.0.6
   - spacy-lookups-data          = 1.0.0
   - spacy-model-en_core_web_sm  = 3.0.0
-  - tensorflow                  = 2.4.1
   - transformers                = 4.4.2
   - pip:
+    - tensorflow                == 2.4.1
     - whatlies                  == 0.6.3
     - graphviz                  == 0.17
     - html2text                 == 2020.1.16
