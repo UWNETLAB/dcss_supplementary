@@ -1,4 +1,4 @@
-<a href="https://uk.sagepub.com/en-gb/eur/doing-computational-social-science/book266031"><img src="http://www.johnmclevey.com/assets/images/dcss_cover.png" width="150"  align="right"/></a>
+<a href="https://uk.sagepub.com/en-gb/eur/doing-computational-social-science/book266031"><img src="https://www.johnmclevey.com/images/DCSS.png" width="150"  align="right"/></a>
 
 # DOING COMPUTATIONAL SOCIAL SCIENCE
 
