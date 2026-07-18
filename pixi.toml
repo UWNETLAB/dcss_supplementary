@@ -1,0 +1,96 @@
+[workspace]
+name = "dcss"
+description = "Doing Computational Social Science: supplementary materials environment (2026 refresh)"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+# This is the modern (2026) environment for the DCSS supplementary
+# materials. It replaces the pinned 2021-era conda environment files for
+# students on current macOS (Apple Silicon) and Linux machines. Install
+# pixi (https://pixi.sh), then run `pixi install` in this directory and
+# `pixi run jupyter lab` to work through the notebooks.
+#
+# Notes on differences from the book-era environment:
+# - PyMC 5 replaces PyMC3. The Bayesian notebooks have been updated
+#   accordingly (`import pymc as pm`).
+# - scikit-learn >= 1.2 removed `get_feature_names()`; the dcss package
+#   and notebooks now use `get_feature_names_out()`.
+# - tensorflow, twec, and whatlies are NOT included: twec and whatlies
+#   are unmaintained and pin ancient gensim/sklearn versions. See the
+#   notes at the top of the affected notebooks (chapters 23 and 31).
+
+[dependencies]
+python = "3.11.*"
+pip = "*"
+# core scientific stack
+numpy = "*"
+# pandas 3 changes copy-on-write and string-dtype behavior in ways that
+# silently alter book-era examples; stay on the 2.x series for now.
+pandas = ">=2.2,<3"
+scipy = "*"
+scikit-learn = "*"
+matplotlib = "*"
+seaborn = "*"
+statsmodels = "*"
+# NLP
+spacy = ">=3.7"
+spacy-model-en_core_web_sm = "*"
+spacy-model-en_core_web_md = "*"
+spacy-lookups-data = "*"
+gensim = ">=4.3"
+html2text = "*"
+# networks
+networkx = ">=3"
+# graph-tool 3.0 conda-forge builds for osx-arm64 currently fail with C++
+# dispatch errors ("Cannot extract parameter g"); 2.98 works correctly.
+graph-tool = "<3"
+python-igraph = "*"
+leidenalg = "*"
+python-louvain = "*"
+graphviz = "*"
+python-graphviz = "*"
+pydot = "*"
+# Bayesian stack
+pymc = ">=5"
+arviz = "*"
+# scraping / web
+requests = "*"
+beautifulsoup4 = "*"
+lxml = "*"
+# utilities
+click = "*"
+pyyaml = "*"
+joblib = "*"
+tqdm = "*"
+pyprojroot = "*"
+pytables = "*"
+openpyxl = "*"
+# notebooks
+ipykernel = "*"
+jupyterlab = "*"
+nbconvert = "*"
+nbclient = "*"
+
+[pypi-dependencies]
+ndlib = "*"
+pyldavis = "*"
+dcss = { path = ".", editable = true }
+
+# Optional stacks. The TensorFlow chapter (23) and the transformer-based
+# chapter (32) need heavyweight dependencies that most readers do not,
+# so they live in separate pixi environments:
+#   pixi install -e deep   # TensorFlow/Keras (chapter 23, module 10)
+#   pixi install -e trf    # spacy-transformers + en_core_web_trf (chapter 32)
+[feature.deep.pypi-dependencies]
+tensorflow = ">=2.16"
+
+[feature.trf.pypi-dependencies]
+spacy-transformers = "*"
+en-core-web-trf = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.8.0/en_core_web_trf-3.8.0-py3-none-any.whl" }
+
+[environments]
+deep = ["deep"]
+trf = ["trf"]
+
+[tasks]
+lab = "jupyter lab"

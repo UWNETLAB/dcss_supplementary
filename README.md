@@ -6,6 +6,25 @@ Hello! This git repository contains the supplementary materials for [John McLeve
 
 # THE DCSS VIRTUAL ENVIRONMENT
 
+## Recommended setup in 2026: pixi
+
+The pinned 2021-era conda environments below still document what the book was written against, but many of those pins are hard to install on current machines (especially Apple Silicon Macs). The simplest way to get a working environment today is [pixi](https://pixi.sh):
+
+```bash
+# install pixi once (see https://pixi.sh for other options)
+curl -fsSL https://pixi.sh/install.sh | sh
+
+# then, from the root of this repository:
+pixi install
+pixi run lab   # launches Jupyter Lab inside the environment
+```
+
+The `pixi.toml` manifest in this repository targets current macOS (Apple Silicon) and Linux, and installs modern versions of the full stack used in the book: pandas, scikit-learn, spaCy (with the small and medium English models), gensim, networkx, graph-tool, igraph/leidenalg, and PyMC 5 with ArviZ. The chapter and module notebooks in this repository have been updated to run against these modern versions. Where an updated library changed an API the book text shows (for example PyMC3 versus PyMC 5, or scikit-learn's `get_feature_names_out`), the notebooks note the difference inline.
+
+Two heavyweight optional stacks live in separate pixi environments so the default environment stays small. `pixi install -e deep` adds TensorFlow and Keras for Chapter 23 and Module 10, and `pixi install -e trf` adds spacy-transformers, PyTorch, and the `en_core_web_trf` model for Chapter 32. Two book-era tools are not installable on a current stack at all: `twec` and `whatlies`, both unmaintained. Chapter 31 explains what they did and how to build a legacy environment if you want to reproduce that analysis.
+
+## Book-era setup: conda
+
 The book refers to a DCSS virtual environment that can be created from the YAML file `environment.yml`, which you can find in the root directory of this repo. It has all the packages and other dependencies needed to execute the code in the book. You can create it on your own system using Conda, as described in the book. From this directory:
 
 ```bash
@@ -24,14 +43,14 @@ But... what if things don't go as expected?
 
 As far as virtual environments go, this is a pretty big one. If you are on an older system, or one with limited memory, you might run into some installation issues. In that case, we recommend that you use [Mamba](https://mamba.readthedocs.io/en/latest/index.html) instead of Conda to install the environment. Mamba is a much faster and more efficient cross-platform package manager than Conda, and can easily handle installing the DCSS environment. You may want to use it even if you aren't using a system with limited memory!
 
-You can find the installation instructions for Mamba [here](https://github.com/conda-forge/miniforge#mambaforge). In most cases, you should be able to just run the command below, which downloads the Mamba install script (with `curl`) and then runs the installer.
+The easiest way to get Mamba is to install [Miniforge](https://github.com/conda-forge/miniforge), which ships both `conda` and `mamba`. (Note: the book and earlier versions of this README pointed to the "Mambaforge" installer, which was deprecated in 2024 and is no longer distributed. Use Miniforge3 instead.) In most cases, you should be able to just run the command below, which downloads the Miniforge install script (with `curl`) and then runs the installer.
 
 ```bash
-curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
-bash Mambaforge-$(uname)-$(uname -m).sh
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-Once you have Mamba installed, you can use it in place of Conda. 
+Once you have Miniforge installed, you can use `mamba` in place of Conda. 
 
 ```bash
 mamba env create -f environment.yml
@@ -54,7 +73,7 @@ mamba activate dcss
 
 # THE DCSS ENVIRONMENT AND JUPYTER
 
-Installing the DCSS environment only helpful if you can make use of it in your development environment of choice. Throughout the book, we assume that you're using Jupyter (lab/notebook) to follow along with the code examples. To run code in the DCSS environment from within Jupyter, perform the following steps:
+Installing the DCSS environment is only helpful if you can make use of it in your development environment of choice. Throughout the book, we assume that you're using Jupyter (lab/notebook) to follow along with the code examples. To run code in the DCSS environment from within Jupyter, perform the following steps:
 
 1. Activate the DCSS environment using `conda activate dcss`
 2. Register the DCSS environment as a Jupyter kernel using `python -m ipykernel install --user --name=dcss`
@@ -72,7 +91,9 @@ You can install the `dcss` package using pip:
 pip install dcss
 ```
 
-The package source code is also hosted in this repo. If you like, you can browse it in `PATH TO PACKAGE SOURCE CODE`. 
+The package source code is also hosted in this repo. If you like, you can browse it in [`src/dcss/`](src/dcss/).
+
+> **Note (2026):** The published `dcss` package on PyPI (1.0.2) depends on `pymc3`, which has been superseded by [PyMC](https://www.pymc.io) (version 4 and later). `pip install dcss` into a modern Python environment may fail or pull in very old dependencies. To follow along with the book, install the pinned conda environment above, which already includes the compatible package versions. 
 
 # DATASETS
 
@@ -80,7 +101,7 @@ The `data` directory contains all of the datasets that I use in the book, or in 
 
 In `data/`, you will find: 
 
-- A filtered and subsetted of the Version 11 [Varieties of Democracy](https://www.v-dem.net/en/data/data/) data, released in 2021.
+- A filtered and subsetted version of the Version 11 [Varieties of Democracy](https://www.v-dem.net/en/data/data/) data, released in 2021.
 - A large sample from the [Canadian Hansard](https://www.ourcommons.ca/documentviewer/en/35-2/house/hansard-index).
 - A large sample from the [British Hansard](https://hansard.parliament.uk).
 - A variety of social network datasets collected by the [SocioPatterns Team](http://www.sociopatterns.org). 
@@ -103,9 +124,9 @@ Other datasets may be added over time, depending on what I am teaching in my own
 
 The book contains several chapters on contextual embeddings models, including how to train a variety of different types of embedding models over long time periods (e.g., over 100 years of large-scale text data). 
 
-Not everyone has access to the computational resources needed to train models like these, and there are very good reasons (e.g., limiting energy use) to avoid re-training them needlessly. As such, my students and I have made all of the contextual embedding models we've trained for this book and for a few related projects available here. These models were trained in my lab using our own servers, and will be updated over time as new data is released.
+Not everyone has access to the computational resources needed to train models like these, and there are very good reasons (e.g., limiting energy use) to avoid re-training them needlessly. My students and I trained a collection of embedding models for this book and for a few related projects in my lab using our own servers.
 
-The `pretrained_models` directory contains the models we trained for the Canadian Hansard and 120 years of academic scholarship on democracy and autocracy (see McLevey, Crick, Browne, and Durant 2022 "[A new method for computational cultural cartography: From neural word embeddings to transformers and Bayesian mixture models](https://onlinelibrary.wiley.com/doi/abs/10.1111/cars.12378)"). 
+We previously distributed the models we trained for the Canadian Hansard and 120 years of academic scholarship on democracy and autocracy (see McLevey, Crick, Browne, and Durant 2022 "[A new method for computational cultural cartography: From neural word embeddings to transformers and Bayesian mixture models](https://onlinelibrary.wiley.com/doi/abs/10.1111/cars.12378)") via Git LFS in the `pretrained_models` directory. They were too large to keep in the repository, so that directory is currently an empty placeholder. If you need the pretrained models, please [file an issue](https://github.com/UWNETLAB/dcss_supplementary/issues) and we will arrange access. The notebooks that train models from scratch (e.g., Chapter 31) write their outputs to the `models/` directory in this repo. 
 
 # INSTRUCTOR RESOURCES
 
@@ -119,7 +140,7 @@ The `figures` directory contains every figure from the book as vector graphics (
 
 ## Supplementary Chapter Content
 
-`supplementary_content` contains a number of notebooks that go beyond what is covered in the book. As of right now, it contains notebooks on collecting data from social media APIs (Twitter and Reddit) and on web scraping with Selenium. It also contains some additional content on analytical Bayesian inference that is intended to provide some additional clarity on the basic logic of Bayesian inference. If Bayesian inference is new to you, I suggest working through this example after working on Chapters 23 and 24. 
+`supplementary_content` is a placeholder for notebooks that go beyond what is covered in the book, including collecting data from social media APIs and web scraping with Selenium, as well as additional content on analytical Bayesian inference. **These notebooks are not yet available in this repository.** Please also note that the social media data collection landscape has changed substantially since the book was published: the free Twitter/X APIs used in the book era (including the academic research track) were discontinued in 2023, and Reddit moved to a paid API model in 2023. Treat any Twitter/X or Reddit data collection instructions from the book as historical, and check the current platform documentation before planning a data collection project. 
 
 ## Practical Advice from Other Computational Social Scientists and Data Scientists
 

@@ -7,11 +7,9 @@ data = {}
 file_list = [os.path.join(root, file) for root, dirs, files in os.walk(os.path.expanduser("dcss/data/")) for file in files]
 
 for file_path in file_list:
-    file = file_path.split('.')[0]
-    try:
-        filename = file.split('\\')[2]
-    except:
-        filename = file.split('/')[3]
+    # Key each dataset by its file name without the extension.
+    # os.path handles both POSIX and Windows separators.
+    filename = os.path.splitext(os.path.basename(file_path))[0]
     data[filename] = file_path
 
 

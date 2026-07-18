@@ -2,7 +2,6 @@ import pandas as pd
 pd.set_option("display.notebook_repr_html", False)
 import numpy as np
 import seaborn as sns
-import pymc3 as pm
 import arviz as az
 
 import matplotlib as mpl
@@ -15,6 +14,25 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
+def _flat_posterior(posterior, var):
+    """
+    Return posterior samples of ``var`` flattened across chains, shaped
+    (n_samples,) for scalar variables and (n_samples, dim) for vector
+    variables. This mirrors the sample-major layout of the old PyMC3
+    MultiTrace objects (trace[var]) so the plotting code below can index
+    samples the same way the book does.
+    """
+    da = posterior[var]
+    return da.stack(sample=("chain", "draw")).transpose("sample", ...).values
+
+
+def _flat_predictive(ppc, var):
+    """
+    Return posterior/prior predictive samples of ``var`` from an ArviZ
+    InferenceData object, flattened across chains: (n_samples, n_obs).
+    """
+    da = ppc.posterior_predictive[var]
+    return da.stack(sample=("chain", "draw")).transpose("sample", ...).values
 
 
 def plot_2020_election_diff(df):
@@ -48,6 +66,12 @@ def plot_2020_election_diff(df):
 
 
 def plot_2020_election_fit(spend_std, vote_std, trace_pool, ppc):
+    """
+    Plot the pooled-model fit. ``trace_pool`` is the InferenceData returned
+    by pm.sample() and ``ppc`` is the InferenceData returned by
+    pm.sample_posterior_predictive(). (Updated from the PyMC3-era version,
+    which took a MultiTrace and a dict of predictive samples.)
+    """
     g = sns.scatterplot(x=spend_std, y=vote_std, alpha=.8)
     g.set(xlim = (-10, 5))
     g.set(ylim = (-3, 4))
@@ -55,8 +79,9 @@ def plot_2020_election_fit(spend_std, vote_std, trace_pool, ppc):
     g.axvline(x=0, color='grey')
     x_range = np.linspace(-10, 4, 10)
 
-    alpha_m = trace_pool['alpha'].mean()
-    beta_m = trace_pool['beta'].mean()
+    post = trace_pool.posterior
+    alpha_m = post['alpha'].mean().item()
+    beta_m = post['beta'].mean().item()
 
     g.plot(
         x_range,
@@ -64,9 +89,12 @@ def plot_2020_election_fit(spend_std, vote_std, trace_pool, ppc):
         c='k',
     )
 
+    alpha_samples = _flat_posterior(post, 'alpha')
+    beta_samples = _flat_posterior(post, 'beta')
+
     mu_pool = (
-        ppc['alpha']
-        + ppc['beta'] * np.array(spend_std)[:, None]
+        alpha_samples
+        + beta_samples * np.array(spend_std)[:, None]
         )
 
     az.plot_hdi(
@@ -78,7 +106,7 @@ def plot_2020_election_fit(spend_std, vote_std, trace_pool, ppc):
 
     az.plot_hdi(
         spend_std,
-        ppc['votes'],
+        _flat_predictive(ppc, 'votes'),
         ax = g,
         fill_kwargs={"alpha": 0.4, "color": "lightgray", "label": "Outcome 94% HPD"}
     )
@@ -97,7 +125,13 @@ def plot_2020_no_pool(
     ppc,
     state_cat
 ):
-
+    """
+    Plot per-state fits for the no-pooling model. ``trace_no_pool`` and
+    ``ppc`` are InferenceData objects (pm.sample() and
+    pm.sample_posterior_predictive() in PyMC 5). The per-state slopes and
+    intercepts come from the posterior; the predictive band for the
+    observed outcome comes from the posterior predictive samples.
+    """
     # Initialize one subplot for each state
     _, ax = plt.subplots(
         8,
@@ -114,49 +148,56 @@ def plot_2020_no_pool(
     # Just defining a range of values to put our estimator line on
     x_range = np.linspace(-8, 4, 10)
 
+    alpha_samples = _flat_posterior(trace_no_pool.posterior, 'alpha')
+    beta_samples = _flat_posterior(trace_no_pool.posterior, 'beta')
+    votes_pp = _flat_predictive(ppc, 'votes')
 
-    with no_pool_model:
+    state_idx = np.asarray(state_idx)
+    spend_std = np.asarray(spend_std)
+    vote_std = np.asarray(vote_std)
 
-        for i in range(n_states):
+    for i in range(n_states):
 
-            ax[i].set_xlim((-4, 4))
-            ax[i].set_ylim((-4, 4))
+        mask = state_idx == i
 
-            # Create a scatterplot of the data from each state
-            ax[i].scatter(spend_std[state_idx == i], vote_std[state_idx == i])
+        ax[i].set_xlim((-4, 4))
+        ax[i].set_ylim((-4, 4))
 
-            alpha_m = trace_no_pool['alpha'][:, i].mean()
-            beta_m = trace_no_pool['beta'][:, i].mean()
+        # Create a scatterplot of the data from each state
+        ax[i].scatter(spend_std[mask], vote_std[mask])
 
-            ax[i].plot(
-                x_range,
-                alpha_m + beta_m * x_range, # This is our linear model
-                c='k',
+        alpha_m = alpha_samples[:, i].mean()
+        beta_m = beta_samples[:, i].mean()
+
+        ax[i].plot(
+            x_range,
+            alpha_m + beta_m * x_range, # This is our linear model
+            c='k',
+        )
+
+        ax[i].set_title(state_cat.categories[i])
+
+        if mask.sum() > 1:
+            mu_pp = (
+                alpha_samples[:, i]
+                + beta_samples[:, i] * spend_std[mask][:, None]
+                )
+
+            az.plot_hdi(
+                spend_std[mask],
+                mu_pp.T,
+                ax=ax[i],
+                fill_kwargs={"alpha": 0.4, "label": "Mean outcome 94% HPD"},
             )
 
-            ax[i].set_title(state_cat.categories[i])
+            az.plot_hdi(
+                spend_std[mask],
+                votes_pp[:, mask],
+                ax=ax[i],
+                fill_kwargs={"alpha": 0.4, "color": "lightgray", "label": "Outcome 94% HPD"}
+            )
 
-            if len(spend_std[state_idx == i]) > 1:
-                mu_pp = (
-                    ppc['alpha'][:,i]
-                    + ppc['beta'][:,i] * np.array(spend_std[state_idx == i])[:, None]
-                    )
-
-                az.plot_hdi(
-                    spend_std[state_idx == i],
-                    mu_pp.T,
-                    ax=ax[i],
-                    fill_kwargs={"alpha": 0.4, "label": "Mean outcome 94% HPD"},
-                )
-
-                az.plot_hdi(
-                    spend_std[state_idx == i],
-                    ppc['votes'][:, state_idx == i],
-                    ax=ax[i],
-                    fill_kwargs={"alpha": 0.4, "color": "lightgray", "label": "Outcome 94% HPD"}
-                )
-
-            ax[i].set_title(state_cat.categories[i])
+        ax[i].set_title(state_cat.categories[i])
 
 
 
@@ -171,8 +212,11 @@ def plot_2020_partial_pool(
     ppc,
     state_cat
 ):
-
-
+    """
+    Plot per-state fits for the regularized partial-pooling model against
+    the no-pooling estimates. All traces and ``ppc`` are InferenceData
+    objects (PyMC 5).
+    """
     _, ax = plt.subplots(
         8,
         6,
@@ -189,59 +233,63 @@ def plot_2020_partial_pool(
     # Just defining a range of values to put our estimator line on
     x_range = np.linspace(-8, 4, 10)
 
+    alpha_np = _flat_posterior(trace_no_pool.posterior, 'alpha')
+    beta_np = _flat_posterior(trace_no_pool.posterior, 'beta')
+    alpha_pp = _flat_posterior(trace_partial_pool_regularized.posterior, 'alpha')
+    beta_pp = _flat_posterior(trace_partial_pool_regularized.posterior, 'beta')
+    votes_pp = _flat_predictive(ppc, 'votes')
 
-    with partial_pool_model_regularized:
+    state_idx = np.asarray(state_idx)
+    spend_std = np.asarray(spend_std)
+    vote_std = np.asarray(vote_std)
 
-        # Iterate over the number of states in our data...
-        for i in range(n_states):
+    # Iterate over the number of states in our data...
+    for i in range(n_states):
 
-            ax[i].set_xlim((-4, 4))
-            ax[i].set_ylim((-4, 4))
+        mask = state_idx == i
 
-            # Create a scatterplot of the data from each state
-            # We can use the state_idx variable and an equality statement to produce
-            # a mask for our other array-based variables and feed them in
-            ax[i].scatter(spend_std[state_idx == i], vote_std[state_idx == i])
+        ax[i].set_xlim((-4, 4))
+        ax[i].set_ylim((-4, 4))
 
-            alpha_m = trace_no_pool['alpha'][:, i].mean()
-            beta_m = trace_no_pool['beta'][:, i].mean()
+        # Create a scatterplot of the data from each state
+        # We can use the state_idx variable and an equality statement to produce
+        # a mask for our other array-based variables and feed them in
+        ax[i].scatter(spend_std[mask], vote_std[mask])
 
-            ax[i].plot(
-                x_range,
-                alpha_m + beta_m * x_range, # This is just our linear model
-                c='darkgrey',
-            )
+        # The no-pooling estimates, for comparison
+        ax[i].plot(
+            x_range,
+            alpha_np[:, i].mean() + beta_np[:, i].mean() * x_range,
+            c='darkgrey',
+        )
 
-            # Pull the averaged coefficients for each state from the trace
-            alpha_m = trace_partial_pool_regularized['alpha'][:, i].mean()
-            beta_m = trace_partial_pool_regularized['beta'][:, i].mean()
+        # Pull the averaged coefficients for each state from the posterior
+        ax[i].plot(
+            x_range,
+            alpha_pp[:, i].mean() + beta_pp[:, i].mean() * x_range,
+            c='k',
+        )
 
-            ax[i].plot(
-                x_range,
-                alpha_m + beta_m * x_range, # This is just our linear model
-                c='k',
-            )
+        ax[i].set_title(state_cat.categories[i])
 
-            ax[i].set_title(state_cat.categories[i])
-
-            if len(spend_std[state_idx == i]) > 1:
-                mu_pp = (
-                    ppc['alpha'][:,i]
-                    + ppc['beta'][:,i] * np.array(spend_std[state_idx == i])[:, None]
-                    )
-
-                az.plot_hdi(
-                    spend_std[state_idx == i],
-                    mu_pp.T,
-                    ax=ax[i],
-                    fill_kwargs={"alpha": 0.4, "label": "Mean outcome 94% HPD"},
+        if mask.sum() > 1:
+            mu_pp = (
+                alpha_pp[:, i]
+                + beta_pp[:, i] * spend_std[mask][:, None]
                 )
 
-                az.plot_hdi(
-                    spend_std[state_idx == i],
-                    ppc['votes'][:, state_idx == i],
-                    ax=ax[i],
-                    fill_kwargs={"alpha": 0.4, "color": "lightgray", "label": "Outcome 94% HPD"}
-                )
+            az.plot_hdi(
+                spend_std[mask],
+                mu_pp.T,
+                ax=ax[i],
+                fill_kwargs={"alpha": 0.4, "label": "Mean outcome 94% HPD"},
+            )
 
-            ax[i].set_title(state_cat.categories[i])
+            az.plot_hdi(
+                spend_std[mask],
+                votes_pp[:, mask],
+                ax=ax[i],
+                fill_kwargs={"alpha": 0.4, "color": "lightgray", "label": "Outcome 94% HPD"}
+            )
+
+        ax[i].set_title(state_cat.categories[i])

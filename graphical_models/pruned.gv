@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Arrests for Political Content <= 2.187\ngini = 0.5\nsamples = 134\nvalue = [68, 66]\nclass = Autocracy"] ;
+1 [label="Social Media Censorship <= 3.444\ngini = 0.32\nsamples = 80\nvalue = [64, 16]\nclass = Autocracy"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Social Media Censorship <= 3.276\ngini = 0.074\nsamples = 52\nvalue = [50, 2]\nclass = Autocracy"] ;
+1 -> 2 ;
+3 [label="gini = 0.043\nsamples = 46\nvalue = [45, 1]\nclass = Autocracy"] ;
+2 -> 3 ;
+4 [label="gini = 0.278\nsamples = 6\nvalue = [5, 1]\nclass = Autocracy"] ;
+2 -> 4 ;
+5 [label="Online Media Diversity <= 2.105\ngini = 0.5\nsamples = 28\nvalue = [14, 14]\nclass = Autocracy"] ;
+1 -> 5 ;
+6 [label="gini = 0.0\nsamples = 3\nvalue = [0, 3]\nclass = Democracy"] ;
+5 -> 6 ;
+7 [label="gini = 0.493\nsamples = 25\nvalue = [14.0, 11.0]\nclass = Autocracy"] ;
+5 -> 7 ;
+8 [label="Online Media Diversity <= 2.81\ngini = 0.137\nsamples = 54\nvalue = [4, 50]\nclass = Democracy"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="Domestic Misinformation <= 2.352\ngini = 0.49\nsamples = 7\nvalue = [3, 4]\nclass = Democracy"] ;
+8 -> 9 ;
+10 [label="gini = 0.375\nsamples = 4\nvalue = [3, 1]\nclass = Autocracy"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 3\nvalue = [0, 3]\nclass = Democracy"] ;
+9 -> 11 ;
+12 [label="Arrests for Political Content <= 2.498\ngini = 0.042\nsamples = 47\nvalue = [1, 46]\nclass = Democracy"] ;
+8 -> 12 ;
+13 [label="gini = 0.245\nsamples = 7\nvalue = [1, 6]\nclass = Democracy"] ;
+12 -> 13 ;
+14 [label="gini = 0.0\nsamples = 40\nvalue = [0, 40]\nclass = Democracy"] ;
+12 -> 14 ;
+}

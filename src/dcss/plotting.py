@@ -16,7 +16,12 @@ def custom_seaborn(vector_raster=True):
             color_codes=True,
             rc={'figure.dpi':300, 'savefig.dpi':300, 'figure.figsize':(6,4)})
     if vector_raster is True:
-        from IPython.display import set_matplotlib_formats
+        try:
+            # IPython >= 7.23 moved set_matplotlib_formats to matplotlib_inline;
+            # it was removed from IPython.display in IPython 8.
+            from matplotlib_inline.backend_inline import set_matplotlib_formats
+        except ImportError:
+            from IPython.display import set_matplotlib_formats
         set_matplotlib_formats('pdf', 'png')
 
 

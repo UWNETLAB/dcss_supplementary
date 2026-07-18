@@ -1,4 +1,12 @@
 import pandas as pd
+import numpy as np
+
+# NumPy 2 removed the float128 alias on platforms without extended precision,
+# but graph-tool < 3 still references numpy.float128 when typing hashed edge
+# lists. Restore the alias so those code paths keep working.
+if not hasattr(np, "float128"):
+    np.float128 = np.longdouble
+
 import random
 import math
 import copy
@@ -168,14 +176,10 @@ def get_block_membership(state, graph, employee_df, column_prefix):
 
     levels = state.get_levels()
     base_level = levels[0].get_blocks()
-    block_list = []
+    blocks = np.asarray(base_level.a)
 
-    for index, row in employee_df.iterrows():
-        email = row['id']
-        node = lookup[email]
-        block_list.append(base_level[node])
-
-    employee_df[column_prefix + '_block_id'] = block_list
+    node_idx = employee_df['id'].map(lambda email: int(lookup[email])).to_numpy()
+    employee_df[column_prefix + '_block_id'] = blocks[node_idx]
 
     return employee_df
 
@@ -243,7 +247,10 @@ def label_radial_blockmodel(G, state):
 
     # calculate the graph positions for our nodes as well as the control points where our edges will bend
     # so they align more closely with the square hierarchy markers
-    tpos = pos = gt.all.radial_tree_layout(t, t.vertex(t.num_vertices() - 1), weighted=True)
+    # The hierarchy tree is a filtered graph in current graph-tool, so the
+    # root must be looked up by position rather than raw index.
+    root = t.vertex(t.num_vertices() - 1, use_index=False)
+    tpos = pos = gt.all.radial_tree_layout(t, root, weighted=True)
     cts = gt.all.get_hierarchy_control_points(G, t, tpos)
     pos = G.own_property(tpos)
 
@@ -261,23 +268,6 @@ def label_radial_blockmodel(G, state):
     G.edge_properties['cts'] = cts
 
     return G
-
-def get_block_membership(state, graph, employee_df, column_prefix):
-
-    lookup = graph.graph_properties['vertex_lookup']
-
-    levels = state.get_levels()
-    base_level = levels[0].get_blocks()
-    block_list = []
-
-    for index, row in employee_df.iterrows():
-        email = row['id']
-        node = lookup[email]
-        block_list.append(base_level[node])
-
-    employee_df[column_prefix + '_block_id'] = block_list
-
-    return employee_df
 
 
 def blockmodel_from_edge_df(df, n_edges = None, use_weights = False):
@@ -297,7 +287,7 @@ def blockmodel_from_edge_df(df, n_edges = None, use_weights = False):
     labels = labels.coerce_type()
 
     if n_edges:
-        mask_n = [True]*n_edges + [False]*(len(df) - 200)
+        mask_n = [True]*n_edges + [False]*(len(df) - n_edges)
     else:
         mask_n = [True]*len(df)
     top_mask = G.new_ep('bool')

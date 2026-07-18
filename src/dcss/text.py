@@ -136,7 +136,12 @@ def get_topic_words(vectorizer, model, n_top_words=10):
     Given a vectorizer object and a fit model (e.g. LSA, NMF, LDA) from sklearn
     Gets the top words associated with each and returns them as a dict.
     """
-    words = vectorizer.get_feature_names()
+    # scikit-learn renamed get_feature_names() to get_feature_names_out()
+    # in 1.0 and removed the old name in 1.2.
+    if hasattr(vectorizer, 'get_feature_names_out'):
+        words = vectorizer.get_feature_names_out()
+    else:
+        words = vectorizer.get_feature_names()
 
     topics = {}
     for i,topic in enumerate(model.components_):

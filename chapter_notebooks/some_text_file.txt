@@ -1,0 +1,3 @@
+Computational social science combines social science questions
+with computational tools and methods.
+Reading and writing text files is a basic but essential skill.
